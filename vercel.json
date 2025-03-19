@@ -1,0 +1,47 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "*.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "projects/*.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "/index.html"
+      },
+      {
+        "src": "/about",
+        "dest": "/about.html"
+      },
+      {
+        "src": "/contact",
+        "dest": "/contact.html"
+      },
+      {
+        "src": "/projects/(.*)",
+        "dest": "/projects/$1.html"
+      },
+      {
+        "src": "/(.*)\\.html",
+        "dest": "/$1.html"
+      },
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/$1"
+      }
+    ]
+  }

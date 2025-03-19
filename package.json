@@ -1,0 +1,16 @@
+{
+    "name": "rares-portfolio",
+    "version": "1.0.0",
+    "description": "Rares-Cristian Marc's Project Portfolio",
+    "scripts": {
+        "dev": "vercel dev",
+        "build": "echo 'No build step required'",
+        "deploy": "vercel --prod"
+    },
+    "dependencies": {
+        "nodemailer": "^6.10.0"
+    },
+    "devDependencies": {
+        "vercel": "^41.4.1"
+    }
+}

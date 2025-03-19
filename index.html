@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rares-Cristian Marc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Rares-Cristian Marc</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>My Projects</h1>
+            <p>Welcome, feel free to take a look at my projects!</p>
+        </section>
+
+        <section class="project-carousel">
+            <div class="carousel-container">
+                <div class="project-card active" data-project="image-manager">
+                    <h2>Image Manager</h2>
+                    <p>Cross-platform application for easy image management built with Tauri, JavaScript, and Rust.</p>
+                    <a href="projects/image-manager.html" class="btn">Learn More</a>
+                </div>
+                
+                <div class="project-card" data-project="3d-model-gallery">
+                    <h2>3D Model Gallery</h2>
+                    <p>Python application for managing and visualizing 3D model files with PyQt and VTK.</p>
+                    <a href="projects/3d-model-gallery.html" class="btn">Learn More</a>
+                </div>
+                
+                <div class="project-card" data-project="3d-reconstruction">
+                    <h2>3D Model Reconstruction</h2>
+                    <p>Web application that converts 2D images into detailed 3D models with Django and COLMAP.</p>
+                    <a href="projects/3d-reconstruction.html" class="btn">Learn More</a>
+                </div>
+                
+
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Rares-Cristian Marc. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://github.com/RaresMrc" target="_blank">GitHub</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
