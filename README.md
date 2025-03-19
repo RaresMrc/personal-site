@@ -1,2 +1,2 @@
-<h1>Personal website</h1>
+# Personal website
 [Visit](https://raresmrc.vercel.app/)
