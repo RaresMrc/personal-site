@@ -6,12 +6,16 @@
         "use": "@vercel/static"
       },
       {
-        "src": "projects/*.html",
+        "src": "*.css",
         "use": "@vercel/static"
       },
       {
-        "src": "api/**/*.js",
-        "use": "@vercel/node"
+        "src": "*.js",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "projects/*.html",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
@@ -34,10 +38,6 @@
       {
         "src": "/(.*)\\.html",
         "dest": "/$1.html"
-      },
-      {
-        "src": "/api/(.*)",
-        "dest": "/api/$1.js"
       },
       {
         "src": "/(.*)",

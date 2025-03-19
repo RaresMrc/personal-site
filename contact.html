@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact - Rares-Cristian Marc</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -51,34 +51,6 @@
                         <p>Cluj-Napoca, Romania</p>
                     </div>
                 </div>
-                
-                <div class="contact-form-container">
-                    <h2>Send me a message</h2>
-                    <form id="contact-form" class="contact-form" action="/api/contact" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                    <div id="form-message" class="form-message"></div>
-                </div>
             </div>
         </section>
     </main>
@@ -89,50 +61,5 @@
             <a href="https://github.com/RaresMrc" target="_blank">GitHub</a>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const messageElem = document.getElementById('form-message');
-            const formData = new FormData(form);
-            const submitBtn = form.querySelector('.submit-btn');
-            
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            messageElem.textContent = '';
-            messageElem.className = 'form-message';
-            
-            fetch('/api/contact', {
-                method: 'POST',
-                body: JSON.stringify(Object.fromEntries(formData)),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                messageElem.textContent = "Thank you! Your message has been sent successfully.";
-                messageElem.classList.add('success');
-                form.reset();
-            })
-            .catch(error => {
-                messageElem.textContent = "There was a problem sending your message. Please try again or contact me directly via email.";
-                messageElem.classList.add('error');
-                console.error('Error:', error);
-            })
-            .finally(() => {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
-            });
-        });
-    </script>
 </body>
 </html>

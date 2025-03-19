@@ -3,14 +3,10 @@
     "version": "1.0.0",
     "description": "Rares-Cristian Marc's Project Portfolio",
     "scripts": {
-        "dev": "vercel dev",
-        "build": "echo 'No build step required'",
-        "deploy": "vercel --prod"
-    },
-    "dependencies": {
-        "nodemailer": "^6.10.0"
+      "dev": "vercel dev",
+      "deploy": "vercel --prod"
     },
     "devDependencies": {
-        "vercel": "^41.4.1"
+      "vercel": "^41.4.1"
     }
-}
+  }
